@@ -3,14 +3,15 @@
     <ul class="todos">
         <% for(todo of todos){ %>
         <li class="todo">
-            <a href="/toggle-status">
+            <a href="/toggle-status/<%= todo._id %>">
                 <div class="td-top">
                     <div class="td-icon">
-                        <i class="far fa-square"></i>
+                        <i class="<%= todo.pendingStatus ? 'far fa-square' : 'far fa-check-square' %>"></i>
                     </div>
-                    <div class="td-desc">
+                    <div class="td-desc <%= todo.pendingStatus ? '' : 'todo-done' %>">
                         <%= todo.desc %>
                     </div>
+                    
                 </div>
                 <div class="td-bottom">
                     <div class="td-date">
