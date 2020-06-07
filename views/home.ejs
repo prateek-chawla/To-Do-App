@@ -1,0 +1,28 @@
+<%- include('_header') %>
+
+<div class="right-pane">
+    <form action="/add-todo" method="POST" id="todo-form">
+        <div class="desc">
+            <input autocomplete="off" type="text" name="desc" id="todo-desc" placeholder="Add Description"
+                required>
+            <label for="todo-desc">Description</label>
+        </div>
+        <div class="date">
+            <input type="date" name="date" id="todo-date" required>
+            <label for="todo-date">Due Date</label>
+        </div>
+        <div class="category">
+            <select name="category" id="todo-category" required>
+                <option value="" disabled selected>Choose a Category</option>
+                <option value="General">General</option>
+                <option value="Personal">Personal</option>
+                <option value="Work">Work</option>
+            </select>
+            <label for="todo-category">Category</label>
+        </div>
+        <button class="submit-todo" type="submit">
+            <a class="submit-todo-btn" href=""><i class="far fa-check-circle"></i></a>
+        </button>
+    </form>
+</div>
+<%- include('_footer') %>

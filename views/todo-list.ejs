@@ -1,0 +1,28 @@
+<%- include('_header') %>
+<div class="right-pane">
+    <ul class="todos">
+        <% for(todo of todos){ %>
+        <li class="todo">
+            <a href="/toggle-status">
+                <div class="td-top">
+                    <div class="td-icon">
+                        <i class="far fa-square"></i>
+                    </div>
+                    <div class="td-desc">
+                        <%= todo.desc %>
+                    </div>
+                </div>
+                <div class="td-bottom">
+                    <div class="td-date">
+                        <%= todo.date %>
+                    </div>
+                    <div class="td-category">
+                        <%= todo.category %>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <% } %>
+    </ul>
+</div>
+<%- include('_footer') %>

@@ -1,0 +1,247 @@
+:root {
+	/* Colors */
+	--light-clr: #f4f6ff;
+	--dark-blue-clr: #142850;
+	--med-blue-clr: #326273;
+	--light-blue-clr: #00909e;
+	--gunmetal-clr: #212738;
+	--red-clr: #bd0f5d;
+}
+
+body {
+	font-size: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--med-blue-clr);
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	padding: 2rem;
+	box-sizing: border-box;
+}
+
+main {
+	background-color: var(--light-clr);
+	width: 50%;
+	height: 80%;
+	border: 2px solid black;
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	border-radius: 1rem;
+	overflow: hidden;
+	box-shadow: 0 0 6px black;
+}
+
+.left-pane,
+.right-pane {
+	padding: 1rem;
+}
+
+.left-pane {
+	display: flex;
+	flex-direction: row;
+	background-color: var(--gunmetal-clr);
+	color: ivory;
+	align-items: center;
+	height: 100%;
+	width: 30%;
+	padding: 0;
+	flex-wrap: wrap;
+	border-right: 3px solid black;
+	overflow: hidden;
+	position: relative;
+}
+
+.left-pane * {
+	width: 100%;
+	margin: 0;
+}
+
+.title {
+	font-family: "Patua One", cursive;
+	width: 100%;
+	height: 30%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-items: center;
+	border-bottom: 2px solid black;
+	text-align: center;
+	font-size: 2rem;
+	color: ivory;
+	background-color: var(--dark-blue-clr);
+}
+
+.add-btn {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 1.3rem;
+	height: 10%;
+	position: absolute;
+	top: 30%;
+	transform: translateY(-90%);
+}
+
+#add-todo {
+	border-radius: 50%;
+	width: fit-content;
+	height: fit-content;
+	padding: 0.5rem 0.7rem;
+	border: 1.5px solid ivory;
+
+	font-size: 1rem;
+	background-color: var(--red-clr);
+}
+#add-todo:hover {
+	background-color: ivory;
+	color: var(--gunmetal-clr);
+}
+#add-todo i {
+	transition: transform 0.3s ease;
+}
+
+#add-todo:hover i {
+	transform: scale(1.3);
+}
+
+a {
+	text-decoration: none;
+	color: ivory;
+}
+
+.nav-tray {
+	height: 70%;
+	display: flex;
+	align-items: center;
+	list-style: none;
+	font-size: 1rem;
+	font-family: "Poppins", sans-serif;
+}
+
+.nav {
+	padding: 0.5rem;
+	padding-left: 1.5rem;
+}
+
+.nav li {
+	display: flex;
+	margin-top: 1rem;
+	flex-wrap: wrap;
+	align-items: center;
+	width: 100%;
+}
+
+.nav li a {
+	border-left: 0.25rem solid transparent;
+	padding-left: 0.8rem;
+}
+
+.nav li:hover {
+	border-left: 4px solid var(--light-clr);
+}
+
+.active {
+	border-left: 0.25rem solid var(--light-blue-clr) !important;
+	padding-left: 2rem;
+	color: var(--light-blue-clr);
+}
+
+/* Right Pane */
+.right-pane {
+	display: flex;
+	height: 100%;
+	width: 70%;
+	justify-content: flex-start;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+}
+
+#todo-form {
+	height: 50%;
+	width: 100%;
+	/* border: 1px solid blue; */
+	display: flex;
+	flex-wrap: wrap;
+	/* justify-content: center; */
+	align-items: center;
+	align-content: center;
+	/* flex-direction: column; */
+}
+
+#todo-form input,
+.category select {
+	height: 100%;
+	width: 90%;
+	background-color: inherit;
+	padding-top: 0.8rem;
+	padding-right: 1rem;
+	padding-left: 0.8rem;
+	font-family: "Roboto", sans-serif;
+	border: none;
+	font-size: 1.1rem;
+}
+
+#todo-form input:focus,
+.category select:focus {
+	outline: none;
+}
+
+#todo-form input:focus + label,
+#todo-form input:valid + label,
+.category select:focus + label,
+.category select:valid + label {
+	color: var(--med-blue-clr);
+	border-bottom: 1px solid #aaa;
+	font-size: 0.6rem;
+	/* border: 2px solid black; */
+}
+.desc,
+.category,
+.date {
+	position: relative;
+	width: 100%;
+	height: 30%;
+	margin: 0;
+	/* border: none; */
+	border: 1px solid #aaa;
+}
+
+.desc {
+	border-bottom: none;
+}
+
+#todo-desc {
+	width: 100%;
+}
+
+label {
+	position: absolute;
+	top: 0.5rem;
+	left: 0.8rem;
+	font-size: 0.8rem;
+	font-family: "Poppins", sans-serif;
+	pointer-events: none;
+}
+
+.submit-todo {
+	background-color: inherit;
+	outline: none;
+	border: none;
+	width: 100%;
+	padding-top: 2rem;
+}
+
+.submit-todo-btn {
+	color: var(--gunmetal-clr);
+	font-size: 3rem;
+	cursor: pointer;
+}
+
+.submit-todo-btn:hover {
+	color: green;
+}
