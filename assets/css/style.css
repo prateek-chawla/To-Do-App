@@ -90,10 +90,9 @@ main {
 	border-radius: 50%;
 	width: fit-content;
 	height: fit-content;
-	padding: 0.5rem 0.7rem;
+	padding: 0.4rem 0.55rem 0.3rem;
 	border: 1.5px solid ivory;
-
-	font-size: 1rem;
+	font-size: 1.1rem;
 	background-color: var(--red-clr);
 }
 #add-todo:hover {

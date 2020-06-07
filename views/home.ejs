@@ -1,14 +1,14 @@
 <%- include('_header') %>
 
 <div class="right-pane">
-    <form action="/add-todo" method="POST" id="todo-form">
+    <form action="/todo/add" method="POST" id="todo-form">
         <div class="desc">
             <input autocomplete="off" type="text" name="desc" id="todo-desc" placeholder="Add Description"
                 required>
             <label for="todo-desc">Description</label>
         </div>
         <div class="date">
-            <input type="date" name="date" id="todo-date" required>
+            <input type="date" name="date" id="todo-date">
             <label for="todo-date">Due Date</label>
         </div>
         <div class="category">

@@ -19,7 +19,7 @@
 .todo {
 	display: flex;
 	align-items: center;
-	flex-wrap: wrap;
+	/* flex-wrap: wrap; */
 	width: 90%;
 	height: 15%;
 	border: 1px solid black;
@@ -29,9 +29,9 @@
 	border-bottom-left-radius: 0.5rem;
 }
 
-.todo a {
+.todo-anchor {
 	color: black;
-	width: 100%;
+	width: 92%;
 }
 
 .td-top,
@@ -61,6 +61,17 @@
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	font-size: 0.9rem;
+}
+
+.todo-dlt{
+	width: 5%;
+	text-align: center;
+	color: rgb(90,90,90);
+}
+
+.todo-dlt:hover{
+	color: crimson;
+	transform:translate(3%,-3%);
 }
 
 .todo-done {

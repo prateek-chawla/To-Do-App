@@ -3,7 +3,7 @@
     <ul class="todos">
         <% for(todo of todos){ %>
         <li class="todo">
-            <a href="/toggle-status/<%= todo._id %>">
+            <a href="/todo/toggle-status/<%= todo._id %>" class="todo-anchor">
                 <div class="td-top">
                     <div class="td-icon">
                         <i class="<%= todo.pendingStatus ? 'far fa-square' : 'far fa-check-square' %>"></i>
@@ -11,17 +11,19 @@
                     <div class="td-desc <%= todo.pendingStatus ? '' : 'todo-done' %>">
                         <%= todo.desc %>
                     </div>
-                    
                 </div>
                 <div class="td-bottom">
                     <div class="td-date">
+                        <% if (todo.date) { %>
                         <%= todo.date %>
+                        <% } %>
                     </div>
                     <div class="td-category">
                         <%= todo.category %>
                     </div>
                 </div>
             </a>
+            <a href="/todo/delete/<%= todo._id %>" class="todo-dlt"> <i class="fas fa-trash-alt "></i></a>
         </li>
         <% } %>
     </ul>
