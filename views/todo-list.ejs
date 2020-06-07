@@ -1,5 +1,6 @@
 <%- include('_header') %>
 <div class="right-pane">
+    <% if (todos.length>0) { %>
     <ul class="todos">
         <% for(todo of todos){ %>
         <li class="todo">
@@ -27,5 +28,13 @@
         </li>
         <% } %>
     </ul>
+    <% } else { %>
+    <div class="empty-icon">
+        <i class="far fa-clipboard"></i>
+        <span class="empty-icon-text">
+            Nothing To Show Here
+        </span>
+    </div>
+    <% } %>
 </div>
 <%- include('_footer') %>

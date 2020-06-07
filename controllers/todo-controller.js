@@ -1,6 +1,5 @@
 const Todo = require("../models/todos");
 
-
 module.exports.addToDo = (req, res) => {
 	todo = { ...req.body, pendingStatus: true };
 	Todo.create(todo, (err, newTodo) => {

@@ -84,6 +84,19 @@
 	text-align: center;
 }
 
+.empty-icon{
+	font-size: 10rem;
+	text-align: center;
+	width: 90%;
+	color: #ccc;
+}
+
+.empty-icon-text{
+	font-size: 1.8rem;
+	display: block;
+	font-family: 'Poppins',sans-serif;
+}
+
 /* ScrollBar */
 
 ::-webkit-scrollbar {

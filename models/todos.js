@@ -13,7 +13,7 @@ const toDoSchema = new mongoose.Schema({
 		type: String,
 		required: true,
 	},
-	date: String
+	date: String,
 });
 
 const Todo = mongoose.model("ToDo", toDoSchema);
