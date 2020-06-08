@@ -6,6 +6,7 @@
 	--light-blue-clr: #00909e;
 	--gunmetal-clr: #212738;
 	--red-clr: #bd0f5d;
+	--grey-clr:#aaa;
 }
 
 body {
@@ -21,6 +22,7 @@ body {
 	box-sizing: border-box;
 }
 
+/* App Area */
 main {
 	background-color: var(--light-clr);
 	width: 50%;
@@ -39,6 +41,7 @@ main {
 	padding: 1rem;
 }
 
+/* Navigation Pane */
 .left-pane {
 	display: flex;
 	flex-direction: row;
@@ -59,6 +62,7 @@ main {
 	margin: 0;
 }
 
+/* App Title - Todo App */
 .title {
 	font-family: "Patua One", cursive;
 	width: 100%;
@@ -95,10 +99,12 @@ main {
 	font-size: 1.1rem;
 	background-color: var(--red-clr);
 }
+
 #add-todo:hover {
 	background-color: ivory;
 	color: var(--gunmetal-clr);
 }
+
 #add-todo i {
 	transition: transform 0.3s ease;
 }
@@ -112,6 +118,7 @@ a {
 	color: ivory;
 }
 
+/* Navigation Links */
 .nav-tray {
 	height: 70%;
 	display: flex;
@@ -137,16 +144,33 @@ a {
 .nav li a {
 	border-left: 0.25rem solid transparent;
 	padding-left: 0.8rem;
+	position: relative;
+	width: 90%;
 }
 
 .nav li:hover {
 	border-left: 4px solid var(--light-clr);
 }
 
+/* Active Navigation Tab */
 .active {
 	border-left: 0.25rem solid var(--light-blue-clr) !important;
 	padding-left: 0.2rem;
 	color: var(--light-blue-clr);
+}
+
+/* Todos List Counter */
+.todo-count {
+	font-size: 0.8rem;
+	width: 2.5rem;
+	position: absolute;
+	top: 50%;
+	left: 90%;
+	transform: translate(-60%, -50%);
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	color: var(--grey-clr);
 }
 
 /* Right Pane */
@@ -158,18 +182,17 @@ a {
 	align-items: center;
 	margin: 0;
 	padding: 0;
+	position: relative;
 }
 
+/* Add ToDo Form */
 #todo-form {
 	height: 50%;
 	width: 100%;
-	/* border: 1px solid blue; */
 	display: flex;
 	flex-wrap: wrap;
-	/* justify-content: center; */
 	align-items: center;
 	align-content: center;
-	/* flex-direction: column; */
 }
 
 #todo-form input,
@@ -190,14 +213,14 @@ a {
 	outline: none;
 }
 
+
 #todo-form input:focus + label,
 #todo-form input:valid + label,
 .category select:focus + label,
 .category select:valid + label {
 	color: var(--med-blue-clr);
-	border-bottom: 1px solid #aaa;
+	border-bottom: 1px solid var(--grey-clr);
 	font-size: 0.6rem;
-	/* border: 2px solid black; */
 }
 .desc,
 .category,
@@ -207,7 +230,7 @@ a {
 	height: 30%;
 	margin: 0;
 	/* border: none; */
-	border: 1px solid #aaa;
+	border: 1px solid var(--grey-clr);
 }
 
 .desc {

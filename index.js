@@ -11,11 +11,12 @@ app.use(express.urlencoded());
 
 app.use(express.static("assets"));
 
-
-const viewRoutes = require('./routes/view-routes')
+const viewRoutes = require("./routes/view-routes");
+const deleteRoutes = require("./routes/delete-routes");
 const todoRoutes = require("./routes/todo-routes");
 
-app.use('/view', viewRoutes)
+app.use("/view", viewRoutes);
+app.use("/delete", deleteRoutes)
 app.use("/todo", todoRoutes);
 
 app.get("/", (req, res) => {

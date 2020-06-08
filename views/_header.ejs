@@ -28,22 +28,64 @@
             <div class="nav-tray">
                 <ul class="nav">
                     <li>
-                        <a class="<%= path==='/all' ? 'active':''%>" href="/view/all">All</a>
+                        <a class="<%= path==='/all' ? 'active':''%>" href="/view/all">All
+                            <% if(path==='/all' && todos.length>0) { %>
+                            <div class="todo-count">
+                                <%= todos.length %>
+                            </div>
+                            <% } %>
+                        </a>
+
                     </li>
                     <li>
-                        <a class="<%= path==='/pending' ? 'active':''%>" href="/view/pending">Pending</a>
+                        <a class="<%= path==='/pending' ? 'active':''%>" href="/view/pending">Pending
+                            <% if(path==='/pending' && todos.length>0) { %>
+                            <div class="todo-count">
+                                <%= todos.length %>
+                            </div>
+                            <% } %>
+                        </a>
+
                     </li>
                     <li>
-                        <a class="<%= path==='/completed' ? 'active':''%>" href="/view/completed">Completed</a>
+                        <a class="<%= path==='/completed' ? 'active':''%>" href="/view/completed">Completed
+                            <% if(path==='/completed' && todos.length>0) { %>
+                            <div class="todo-count">
+                                <%= todos.length %>
+                            </div>
+                            <% } %>
+                        </a>
+
                     </li>
                     <li>
-                        <a class="<%= path==='/general' ? 'active':''%>" href="/view/general">General</a>
+                        <a class="<%= path==='/general' ? 'active':''%>" href="/view/general">General
+                            <% if(path==='/general' && todos.length>0) { %>
+                            <div class="todo-count">
+                                <%= todos.length %>
+                            </div>
+                            <% } %>
+                        </a>
+
                     </li>
                     <li>
-                        <a class="<%= path==='/personal' ? 'active':''%>" href="/view/personal">Personal</a>
+                        <a class="<%= path==='/personal' ? 'active':''%>" href="/view/personal">Personal
+                            <% if(path==='/personal' && todos.length>0) { %>
+                            <div class="todo-count">
+                                <%= todos.length %>
+                            </div>
+                            <% } %>
+                        </a>
+
                     </li>
                     <li>
-                        <a class="<%= path==='/work' ? 'active':''%>" href="/view/work">Work</a>
+                        <a class="<%= path==='/work' ? 'active':''%>" href="/view/work">Work
+                            <% if(path==='/work' && todos.length>0) { %>
+                            <div class="todo-count">
+                                <%= todos.length %>
+                            </div>
+                            <% } %>
+                        </a>
+
                     </li>
 
                 </ul>

@@ -8,7 +8,7 @@
 	margin: 0;
 	padding: 0;
 	width: 100%;
-	height: 80%;
+	height: 75%;
 	overflow-y: auto;
 }
 
@@ -42,7 +42,7 @@
 }
 
 .td-top {
-	border-bottom: 1px solid #aaa;
+	border-bottom: 1px solid var(--grey-clr);
 }
 
 .td-bottom {
@@ -63,15 +63,15 @@
 	font-size: 0.9rem;
 }
 
-.todo-dlt{
+.todo-dlt {
 	width: 5%;
 	text-align: center;
-	color: rgb(90,90,90);
+	color: rgb(90, 90, 90);
 }
 
-.todo-dlt:hover{
+.todo-dlt:hover {
 	color: crimson;
-	transform:translate(3%,-3%);
+	transform: translate(3%, -3%);
 }
 
 .todo-done {
@@ -84,17 +84,36 @@
 	text-align: center;
 }
 
-.empty-icon{
+.empty-icon {
 	font-size: 10rem;
 	text-align: center;
 	width: 90%;
 	color: #ccc;
 }
 
-.empty-icon-text{
+.empty-icon-text {
 	font-size: 1.8rem;
 	display: block;
-	font-family: 'Poppins',sans-serif;
+	font-family: "Poppins", sans-serif;
+}
+
+.delete-all {
+	color: var(--gunmetal-clr);
+	position: absolute;
+	font-size: 2rem;
+	top: 100%;
+	left: 100%;
+	transform: translate(-90%, -90%);
+	background-color: rgb(223, 41, 77);
+	padding: 0.8rem;
+	padding-top: 0.7rem;
+	border-top-left-radius: 1rem;
+	border: 1.5px solid rgba(0, 0, 0, 0.5);
+}
+
+.delete-all:hover {
+	background-color: var(--gunmetal-clr);
+	color: crimson;
 }
 
 /* ScrollBar */
