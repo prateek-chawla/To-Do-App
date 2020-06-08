@@ -1,16 +1,19 @@
 <%- include('_header') %>
 
+<!-- Input ToDo Form -->
 <div class="right-pane">
     <form action="/todo/add" method="POST" id="todo-form">
+        <!-- Description -->
         <div class="desc">
-            <input autocomplete="off" type="text" name="desc" id="todo-desc" placeholder="Add Description"
-                required>
+            <input autocomplete="off" type="text" name="desc" id="todo-desc" placeholder="Add Description" required>
             <label for="todo-desc">Description</label>
         </div>
+        <!-- Due Date -->
         <div class="date">
             <input type="date" name="date" id="todo-date">
             <label for="todo-date">Due Date</label>
         </div>
+        <!-- Category - General, Work, Personal -->
         <div class="category">
             <select name="category" id="todo-category" required>
                 <option value="" disabled selected>Choose a Category</option>
@@ -20,6 +23,7 @@
             </select>
             <label for="todo-category">Category</label>
         </div>
+        <!-- Submit Button -->
         <button class="submit-todo" type="submit">
             <a class="submit-todo-btn" href=""><i class="far fa-check-circle"></i></a>
         </button>

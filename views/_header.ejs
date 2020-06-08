@@ -15,79 +15,40 @@
 </head>
 
 <body>
+    <!-- App Area -->
     <main>
+        <!-- Navigation Pane -->
         <div class="left-pane">
             <div class="title">
                 To-Do App
             </div>
+            <!-- Add ToDo Btn -->
             <div class="add-btn">
                 <a id="add-todo" href="/">
                     <i class="fas fa-plus"></i>
                 </a>
             </div>
+            <!-- Navigation Links -->
             <div class="nav-tray">
                 <ul class="nav">
-                    <li>
-                        <a class="<%= path==='/all' ? 'active':''%>" href="/view/all">All
-                            <% if(path==='/all' && todos.length>0) { %>
-                            <div class="todo-count">
-                                <%= todos.length %>
-                            </div>
-                            <% } %>
-                        </a>
-
-                    </li>
-                    <li>
-                        <a class="<%= path==='/pending' ? 'active':''%>" href="/view/pending">Pending
-                            <% if(path==='/pending' && todos.length>0) { %>
-                            <div class="todo-count">
-                                <%= todos.length %>
-                            </div>
-                            <% } %>
-                        </a>
-
-                    </li>
-                    <li>
-                        <a class="<%= path==='/completed' ? 'active':''%>" href="/view/completed">Completed
-                            <% if(path==='/completed' && todos.length>0) { %>
-                            <div class="todo-count">
-                                <%= todos.length %>
-                            </div>
-                            <% } %>
-                        </a>
-
-                    </li>
-                    <li>
-                        <a class="<%= path==='/general' ? 'active':''%>" href="/view/general">General
-                            <% if(path==='/general' && todos.length>0) { %>
-                            <div class="todo-count">
-                                <%= todos.length %>
-                            </div>
-                            <% } %>
-                        </a>
-
-                    </li>
-                    <li>
-                        <a class="<%= path==='/personal' ? 'active':''%>" href="/view/personal">Personal
-                            <% if(path==='/personal' && todos.length>0) { %>
-                            <div class="todo-count">
-                                <%= todos.length %>
-                            </div>
-                            <% } %>
-                        </a>
-
-                    </li>
-                    <li>
-                        <a class="<%= path==='/work' ? 'active':''%>" href="/view/work">Work
-                            <% if(path==='/work' && todos.length>0) { %>
-                            <div class="todo-count">
-                                <%= todos.length %>
-                            </div>
-                            <% } %>
-                        </a>
-
-                    </li>
-
+                    <!-- Navigation Tabs -->
+                    <% const navigationTabs = ['all','pending','completed','general','work','personal'] %>
+                    <!-- Iterate over each Navigation Tab and create list item -->
+                    <% for (tab of navigationTabs ) {%>
+                        <li>
+                            <% const tabPath = '/'+tab %>
+                            <!-- Add Active Class to Active Tab -->
+                            <a class="<%= path===tabPath ? 'active' : '' %>" href="/view/<%= tab %>">
+                                <%= tab %>
+                                <!-- Display ToDos Count for Active Tab -->
+                                <% if(path===tabPath && todos.length>0) { %>
+                                    <div class="todo-count">
+                                        <%= todos.length %>
+                                    </div>
+                                <% } %>
+                            </a>
+                        </li>
+                    <% } %>
                 </ul>
             </div>
         </div>

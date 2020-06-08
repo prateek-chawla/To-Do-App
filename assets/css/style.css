@@ -6,7 +6,7 @@
 	--light-blue-clr: #00909e;
 	--gunmetal-clr: #212738;
 	--red-clr: #bd0f5d;
-	--grey-clr:#aaa;
+	--grey-clr: #aaa;
 }
 
 body {
@@ -146,6 +146,7 @@ a {
 	padding-left: 0.8rem;
 	position: relative;
 	width: 90%;
+	text-transform: capitalize;
 }
 
 .nav li:hover {
@@ -203,9 +204,14 @@ a {
 	padding-top: 0.8rem;
 	padding-right: 1rem;
 	padding-left: 0.8rem;
-	font-family: "Roboto", sans-serif;
+	font-family: "Poppins", sans-serif;
 	border: none;
 	font-size: 1.1rem;
+}
+
+select option{
+	background-color: #ddd;
+	font-size: 0.9rem;
 }
 
 #todo-form input:focus,
@@ -213,7 +219,7 @@ a {
 	outline: none;
 }
 
-
+/* Decrease Label Font Size when Input is focussed/valid */
 #todo-form input:focus + label,
 #todo-form input:valid + label,
 .category select:focus + label,
@@ -222,6 +228,8 @@ a {
 	border-bottom: 1px solid var(--grey-clr);
 	font-size: 0.6rem;
 }
+
+/* Todo Inputs */
 .desc,
 .category,
 .date {
@@ -229,7 +237,6 @@ a {
 	width: 100%;
 	height: 30%;
 	margin: 0;
-	/* border: none; */
 	border: 1px solid var(--grey-clr);
 }
 
@@ -250,6 +257,7 @@ label {
 	pointer-events: none;
 }
 
+/* Submit Btn */
 .submit-todo {
 	background-color: inherit;
 	outline: none;

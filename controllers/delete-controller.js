@@ -1,5 +1,7 @@
+// Require Todo Model
 const Todo = require("../models/todos");
 
+// Delete All Todos then Redirect to View All
 module.exports.all = (req, res) => {
 	Todo.deleteMany({}, (err, todos) => {
 		if (err) {
@@ -10,6 +12,7 @@ module.exports.all = (req, res) => {
 	});
 };
 
+// Delete Pending Todos then Redirect to View Pending
 module.exports.pending = (req, res) => {
 	Todo.deleteMany({ pendingStatus: true }, (err, todos) => {
 		if (err) {
@@ -20,6 +23,7 @@ module.exports.pending = (req, res) => {
 	});
 };
 
+// Delete Completed Todos then Redirect to View Completed
 module.exports.completed = (req, res) => {
 	Todo.deleteMany({ pendingStatus: false }, (err, todos) => {
 		if (err) {
@@ -30,6 +34,7 @@ module.exports.completed = (req, res) => {
 	});
 };
 
+// Delete General Todos then Redirect to View General
 module.exports.general = (req, res) => {
 	Todo.deleteMany({ category: "General" }, (err, todos) => {
 		if (err) {
@@ -40,6 +45,7 @@ module.exports.general = (req, res) => {
 	});
 };
 
+// Delete Work Todos then Redirect to View Work
 module.exports.work = (req, res) => {
 	Todo.deleteMany({ category: "Work" }, (err, todos) => {
 		if (err) {
@@ -50,6 +56,7 @@ module.exports.work = (req, res) => {
 	});
 };
 
+// Delete Personal Todos then Redirect to View Personal
 module.exports.personal = (req, res) => {
 	Todo.deleteMany({ category: "Personal" }, (err, todos) => {
 		if (err) {

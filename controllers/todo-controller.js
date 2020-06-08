@@ -1,5 +1,7 @@
+// Require Todo Model
 const Todo = require("../models/todos");
 
+//Add To Do to Database
 module.exports.addToDo = (req, res) => {
 	todo = { ...req.body, pendingStatus: true };
 	Todo.create(todo, (err, newTodo) => {
@@ -12,6 +14,7 @@ module.exports.addToDo = (req, res) => {
 	});
 };
 
+//Delete To Do from Database
 module.exports.deleteToDo = (req, res) => {
 	const id = req.params.id;
 	Todo.findByIdAndDelete(id, (err, deletedTodo) => {
@@ -24,6 +27,7 @@ module.exports.deleteToDo = (req, res) => {
 	});
 };
 
+//Toggle Todo Status --> Change Pending to Completed or Completed to Pending
 module.exports.toggleToDo = (req, res) => {
 	const id = req.params.id;
 
